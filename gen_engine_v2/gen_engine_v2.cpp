@@ -1,4 +1,6 @@
-﻿
+﻿// gen_engine_v2.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
+//
+
 #include <iostream>
 #include "gen.h"
 #include <windows.h> //do sleepa
@@ -93,9 +95,9 @@ int main()
         teraz = nast;
 
         i++;
-
-
-
     }
-    return 0;
 }
+
+// Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
+// Debugowanie programu: F5 lub menu Debugowanie > Rozpocznij debugowanie
+
