@@ -56,6 +56,21 @@ void gen::c_show()
 	std::cout << std::endl << iteracja;
 }
 
+void gen::c_show2()
+{
+	system("cls");
+
+	for (int i = 0; i < w; i++)
+	{
+		for (int j = 0; j < k; j++)
+		{
+			std::cout << tab[i][j];
+		}
+		std::cout << std::endl;
+	}
+	std::cout << std::endl << iteracja;
+}
+
 int gen::spr_wylot(int sprawdzana, int maksymalna)
 {
 	if (sprawdzana < 0)
@@ -106,6 +121,47 @@ int gen::dookola(int wd, int kd)
 	if (tab[spr_wylot(wd + 1, w)][spr_wylot(kd + 1, k)]) //prawo dó³
 	{
 		ile++;
+	}
+	return ile;
+}
+
+int* gen::dookola2 (int wd, int kd)
+{
+	int ile[8]{};
+	for (int i = 0; i < 8; i++)
+		ile[i] = 0;
+
+	if (tab[spr_wylot(wd - 1, w)][spr_wylot(kd - 1, k)]) //lewo góra
+	{
+		ile[tab[spr_wylot(wd - 1, w)][spr_wylot(kd - 1, k)]-65]++;
+	}
+	if (tab[spr_wylot(wd - 1, w)][spr_wylot(kd, k)]) // góra
+	{
+		ile[tab[spr_wylot(wd - 1, w)][spr_wylot(kd, k)] - 65]++;
+	}
+	if (tab[spr_wylot(wd - 1, w)][spr_wylot(kd + 1, k)]) //prawo góra
+	{
+		ile[tab[spr_wylot(wd - 1, w)][spr_wylot(kd + 1, k)]-65]++;
+	}
+	if (tab[spr_wylot(wd, w)][spr_wylot(kd - 1, k)]) //lewo
+	{
+		ile[tab[spr_wylot(wd, w)][spr_wylot(kd - 1, k)]-65]++;
+	}
+	if (tab[spr_wylot(wd, w)][spr_wylot(kd + 1, k)]) //prawo
+	{
+		ile[tab[spr_wylot(wd, w)][spr_wylot(kd + 1, k)]-65]++;
+	}
+	if (tab[spr_wylot(wd + 1, w)][spr_wylot(kd - 1, k)]) //lewo dó³
+	{
+		ile[tab[spr_wylot(wd + 1, w)][spr_wylot(kd - 1, k)]-65]++;
+	}
+	if (tab[spr_wylot(wd + 1, w)][spr_wylot(kd, k)]) //dó³
+	{
+		ile[tab[spr_wylot(wd + 1, w)][spr_wylot(kd, k)]-65]++;
+	}
+	if (tab[spr_wylot(wd + 1, w)][spr_wylot(kd + 1, k)]) //prawo dó³
+	{
+		ile[tab[spr_wylot(wd + 1, w)][spr_wylot(kd + 1, k)]-65]++;
 	}
 	return ile;
 }
