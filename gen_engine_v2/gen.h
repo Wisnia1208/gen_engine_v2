@@ -10,7 +10,7 @@ class gen
 private:
 	int w;
 	int k;
-	std::vector <std::vector <bool> > tab;
+	//std::vector <std::vector <bool> > tab;
 	std::vector <std::vector <int> > wiek;
 	std::vector <std::vector <char> > tab2;
 	int iteracja;
@@ -28,7 +28,7 @@ public:
 
 	void losowanie(float p);//to do prawdopodobienstwo
 
-	void c_show();
+	//void c_show();
 
 	void c_show2();
 
@@ -36,13 +36,13 @@ public:
 
 	int dookola(int wd, int kd);
 
-	int* dookola2(int wd, int kd);
+	char dookola2(int wd, int kd);
 
-	std::vector <std::vector <bool> > tabn(std::vector <std::vector <bool> > tab, int max_s, int min_s);
+	std::vector <std::vector <char> > tabn(std::vector <std::vector <char> > tab, int max_s, int min_s);
 
 	void nowy(); //przygotowywyje generacje nastêpn¹
 
-	void wymus(std::vector <std::vector <bool> > tabw);
+	void wymus(std::vector <std::vector <char> > tabw);
 
 	void postarzej(int max_wiek);
 

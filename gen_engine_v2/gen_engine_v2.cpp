@@ -85,7 +85,7 @@ int main()
     while (s != "koniec")
     {
         teraz.postarzej(7);
-        teraz.c_show();
+        teraz.c_show2();
         teraz.w_show();
         teraz.nowy();
         gen nast(teraz);
