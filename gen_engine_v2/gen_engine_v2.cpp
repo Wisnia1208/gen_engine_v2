@@ -65,7 +65,7 @@ int main()
     tab.push_back(sex3);
 
     //teraz.wymus(tab);
-    teraz.losowanie(0.5);
+    teraz.losowanie(0.5,4); //prawdopodobienstwo, ilosc gatunkow
     teraz.set_min_max(2, 3);
 
     //teraz.c_show();

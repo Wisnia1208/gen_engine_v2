@@ -24,9 +24,13 @@ public:
 
 	gen(const gen& popr);
 
-	~gen();//destruktor
+	~gen();
+	
+	//destruktor
 
-	void losowanie(float p);//to do prawdopodobienstwo
+	//void losowanie(float p);//to do prawdopodobienstwo
+
+	void losowanie(float p, int g);
 
 	//void c_show();
 

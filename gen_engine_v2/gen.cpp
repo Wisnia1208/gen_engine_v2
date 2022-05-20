@@ -19,7 +19,7 @@ gen::gen(const gen& popr)
 
 gen::~gen() {}; //destruktor
 
-void gen::losowanie(float p)
+void gen::losowanie(float p,int g)
 {
 	p *= 100;
 	for (int i = 0; i < w; i++)
@@ -28,7 +28,7 @@ void gen::losowanie(float p)
 		{
 			if ((std::rand() % 100) <= p)
 			{
-				tab2[i][j] = 'A';
+				tab2[i][j] = std::rand() % g + 65;
 			}
 			else
 			{
@@ -173,6 +173,7 @@ std::vector <std::vector <char> > gen::tabn(std::vector <std::vector <char> > ta
 		for (int j = 0; j < k; j++)
 		{
 			ilosc = dookola(i, j);
+
 			if ((tab[i][j]=='0') and (ilosc == max_s))
 			{
 				robo[i][j] = dookola2(i,j);
