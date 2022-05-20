@@ -249,3 +249,48 @@ void gen::set_min_max(int min, int max)
 	max_sasiady = max;
 	min_sasiady = min;
 }
+
+bool gen::zapis(std::string nazwa_pliku)
+{
+	std::fstream plik;
+	if (nazwa_pliku.length() != 0)
+	{
+		plik.open(nazwa_pliku+".txt", std::ios::app);
+	}
+	else
+	{
+		plik.open("default_output.txt", std::ios::app);
+	}
+
+	plik << "tabela: " << std::endl << std::endl;
+	for (int i = 0; i < w; i++)
+	{
+		for (int j = 0; j < k; j++)
+		{
+			plik << tab2[i][j];
+		}
+		plik << std::endl;
+	}
+
+	plik << std::endl;
+	plik << "wiek:" << std::endl << std::endl;
+
+	//std::cout << std::endl << std::endl;
+
+	for (int i = 0; i < w; i++)
+	{
+		for (int j = 0; j < k; j++)
+		{
+			plik << wiek[i][j];
+		}
+		plik << std::endl;
+	}
+	plik << std::endl << "iteracja: " << iteracja;
+	plik << std::endl << "=============================================================================================================" << std::endl << std::endl;
+
+
+
+	plik.close();
+
+	return 1;
+}

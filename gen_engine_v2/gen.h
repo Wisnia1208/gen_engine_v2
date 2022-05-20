@@ -2,6 +2,7 @@
 #include <vector>
 #include <iostream>
 #include <cstdlib>
+#include <fstream>
 
 //dodaæ wiêcej polulacji
 
@@ -54,12 +55,10 @@ public:
 
 	void set_min_max(int min, int max);
 
+	bool zapis(std::string nazwa_pliku);
+
 	/*
 	to do
-
-	bool zapis();
-
-	enabej klany
 
 	void symulacja();
 	*/

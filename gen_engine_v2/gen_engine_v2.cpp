@@ -25,7 +25,7 @@ int main()
 
     gen teraz(w, k, 1);
 
-
+  
 
 
     /*
@@ -65,7 +65,7 @@ int main()
     tab.push_back(sex3);
 
     //teraz.wymus(tab);
-    teraz.losowanie(0.5,4); //prawdopodobienstwo, ilosc gatunkow
+    teraz.losowanie(0.3,8); //prawdopodobienstwo, ilosc gatunkow
     teraz.set_min_max(2, 3);
 
     //teraz.c_show();
@@ -84,7 +84,12 @@ int main()
 
     while (s != "koniec")
     {
-        teraz.postarzej(7);
+        if (s == "zapis")
+        {
+            teraz.zapis("test1");
+        }
+
+        teraz.postarzej(10);
         teraz.c_show2();
         teraz.w_show();
         teraz.nowy();
