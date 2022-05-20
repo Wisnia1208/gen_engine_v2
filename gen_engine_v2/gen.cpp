@@ -252,14 +252,18 @@ void gen::set_min_max(int min, int max)
 
 bool gen::zapis(std::string nazwa_pliku)
 {
+	bool dziala;
+
 	std::fstream plik;
 	if (nazwa_pliku.length() != 0)
 	{
 		plik.open(nazwa_pliku+".txt", std::ios::app);
+		dziala = 1;
 	}
 	else
 	{
 		plik.open("default_output.txt", std::ios::app);
+		dziala = 0;
 	}
 
 	plik << "tabela: " << std::endl << std::endl;
@@ -292,5 +296,5 @@ bool gen::zapis(std::string nazwa_pliku)
 
 	plik.close();
 
-	return 1;
+	return dziala;
 }
